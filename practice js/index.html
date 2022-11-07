@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneBook</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Телефонная книига -->
+
+        <div id="book">
+
+            <header>
+
+                <span class="logo" onclick="Contact()">
+                    <i class="fa fa-phone logo-i" aria-hidden="true"></i> <!-- иконка телефона -->
+                </span>
+                <div class="search__container">
+                    <i class="fa fa-search search__icon" aria-hidden="true" onclick="Search()"></i> <!-- иконка лупы -->
+                    <input type="search" class="search__input" id="search__input">
+                </div>
+
+            </header>
+
+            <main id="row">
+                <span class="row-span">Номеров нет</span>
+            </main>
+
+            <footer>
+                <a class="btn" onclick="Add()">Добавить</a>
+            </footer>
+
+        </div>
+
+        <!-- Добавление контактов -->
+
+        <div id="modal">
+            <header>
+                <span class="logo">
+                    <i class="fa fa-phone logo-i" aria-hidden="true"></i> <!-- иконка телефона -->
+                </span>
+                <h1 class="header__title">Add contact</h1>
+            </header>
+            <form action="#">
+                <div class="input-grup">
+                    <label for="input-name">Name</label>
+                    <input type="text" min="2" max="10" class="form__input" id="input__name">
+                </div>
+                
+                <div class="input-grup">
+                    <label for="input-phone">Phone</label>
+                    <input type="tel" min="11" class="form__input input__phone" id="input__phone">
+                </div>
+                
+                <div class="check-grup">
+                    <input type="checkbox" id="like">
+                    <label for="like" class="label-favorites">Favorites</label>
+                </div>
+            </form>
+            <footer>
+                <a class="btn" onclick="Create()">Добавить</a>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
